@@ -1,2 +1,2 @@
-# DHR-AI 🦆
-[Ducks in the Han River] AI
+# HEC-AI 🦆
+[Han River Ecology Collect] AI
