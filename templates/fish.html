@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Farm AI</title>
+  </head>
+  <body>
+    <h1>Fish</h1>
+    <form action="/fish/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" />
+      <input type="submit" value="결과보기" />
+    </form>
+    {% if result %}
+    <h2>Classification Result:</h2>
+    <p>Predicted Class: {{ result['class'] }}</p>
+    <img
+      src="data:image/png;base64,{{ result['image_base64'] }}"
+      alt="Predicted Image"
+      style="width: 50%"
+    />
+    <br />
+    {% endif %}
+    <br /><a href="/"><button>뒤로가기</button></a>
+  </body>
+</html>
